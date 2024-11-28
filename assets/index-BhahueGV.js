@@ -216,7 +216,7 @@ body, html {
     }
     
 }
-`,Hv="/Start/assets/coffeBackground-CZUC5DuO.svg";function Uv(){const l=Zd();function i(){l("/home")}return J.jsxs(Vv,{children:[J.jsx("div",{children:J.jsx("img",{src:Hv,alt:""})}),J.jsxs("footer",{children:[J.jsxs("div",{className:"content",children:[J.jsx("span",{children:"Fall in love with"}),J.jsx("span",{children:"coffe in Blissful"}),J.jsx("span",{children:"Delight"})]}),J.jsx("span",{children:J.jsxs("p",{children:["Welcome to our cozy coffe corner, where ",J.jsx("br",{})," every cup is a delightfull for you"]})}),J.jsx("button",{type:"button",onClick:i,children:"Get Stated"})]})]})}const Bv=Kt.div`
+`,Hv="/Develiry/assets/coffeBackground-CZUC5DuO.svg";function Uv(){const l=Zd();function i(){l("/home")}return J.jsxs(Vv,{children:[J.jsx("div",{children:J.jsx("img",{src:Hv,alt:""})}),J.jsxs("footer",{children:[J.jsxs("div",{className:"content",children:[J.jsx("span",{children:"Fall in love with"}),J.jsx("span",{children:"coffe in Blissful"}),J.jsx("span",{children:"Delight"})]}),J.jsx("span",{children:J.jsxs("p",{children:["Welcome to our cozy coffe corner, where ",J.jsx("br",{})," every cup is a delightfull for you"]})}),J.jsx("button",{type:"button",onClick:i,children:"Get Stated"})]})]})}const Bv=Kt.div`
 
 height: 100%;
 width: 100%;
