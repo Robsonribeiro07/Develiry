@@ -13,6 +13,11 @@ export const HeaderContainer = styled.header<PropsHeader>`
  background-color: ${props => props.color};
  z-index: 1;
 
+ @media screen and (max-width: 768px) {
+
+   display: none;
+ }
+
  span {
     display: flex;
     gap: 0.5rem;

@@ -1,6 +1,5 @@
 import { GetStartHome } from "./style";
-import BackgroundSvg from '../../src/assets/img/coffeBackground.svg'
-
+import BackgroundSvg from '../../src/assets/img/coffeBackground.svg';
 import {useNavigate} from 'react-router-dom'
 
 export function GetStartPage(){

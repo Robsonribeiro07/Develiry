@@ -9,6 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
   
+:focus {
+    outline: 0;
+}
 body, html {
     display: flex;
     height: 100vh;
@@ -18,7 +21,7 @@ body, html {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
     position: relative;
-    
+  -webkit-font-smoothing: antialiased; /* Melhora a suavização das fontes no Chrome/Safari */
 
 }
 

@@ -16,7 +16,12 @@ export const LayoutContainer = styled.div`
     height: 100vh;
     border-radius: 0;
     border: 0;
-    height: 100vh;
+    width: 100vw;;
  }
+ footer {
+   bottom: 0;
+   z-index: 1
+ }
+
 
 `

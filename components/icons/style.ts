@@ -13,6 +13,9 @@ export const IconList = styled.button<IconProps>`
   border-top: 2px solid transparent; /* Sem aspas em "transparent" */
   border-bottom: 2px solid ${props => (props.Border ? "Red" : "transparent")}; /* Condicional para borda */
   transition: border 0.5s ease-out; /* Transição suave para a borda */
+  z-index: 3;
+  
+
   
   /* Se a classe 'active' for aplicada, pode-se mudar o fundo ou outras propriedades */
   &.active {

@@ -1,0 +1,10 @@
+{
+    "presets": [
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"  // React 17+ JSX transform
+        }
+      ]
+    ]
+  }

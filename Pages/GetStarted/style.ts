@@ -56,6 +56,7 @@ export const GetStartHome = styled.div`
         font-size: 1.5rem;
         background-color: ${props => props.theme['Primary']};
         color: white;
+        border: 0;
     cursor: pointer;    
         font-weight: bold;
     }
