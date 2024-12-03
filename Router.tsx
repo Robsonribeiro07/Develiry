@@ -9,7 +9,7 @@ export function AppRouter() {
     <Routes>
       {/* Rota principal usando o DefaultLayout */}
       <Route path="/" element={<DefaultLayout />}>
-      <Route path='start' element={<GetStartPage/>}/>
+      <Route path='Start' element={<GetStartPage/>}/>
       <Route path='home' element={<Home/>}/>
       <Route path='about' element={<DescriptionHome/>}/>
 

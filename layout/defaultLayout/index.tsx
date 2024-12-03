@@ -1,8 +1,10 @@
-import { Outlet } from "react-router-dom";
+import {  Outlet } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { LayoutContainer } from "./style";  
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FooterContent } from "../../components/footer";
+import { useEffect } from "react";
+
 // Tipagem para as cores de cada rota
 interface RouteColors {
     backgroundColor: string;
@@ -43,7 +45,14 @@ const routeColors: Record<string, RouteColors> = {
 
 export function DefaultLayout() {
     const location = useLocation();
-    const disabled = ['Start', 'about'  ]
+    const disabled = ['Start', 'about', 'Develir'  ]
+
+    const Navigate = useNavigate()
+    useEffect(()=> {
+        if(location.pathname.toLowerCase() === "/") {
+            Navigate('/Start')
+        }
+    })
 
     // Obter as cores para a rota atual
     const currentRoute: RouteColors = routeColors[location.pathname] || {

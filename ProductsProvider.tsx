@@ -11,6 +11,7 @@ export interface Product {
   detailedDescription: string; // Descrição detalhada
   id: number;
   rating: string; // Avaliação do produto
+  Size?: string[]; // Tamanhos disponíveis do produto
 }
 
 // Tipo do contexto
@@ -41,7 +42,12 @@ export const ProdutosProviderItem = ({ children }: ProductProviderProps) => {
       detailedDescription: "Hambúrguer com 2 carnes, queijo derretido, alface fresca e molho especial, ideal para quem busca uma refeição rápida e saborosa.",
       imgUrl: 'https://media.istockphoto.com/id/2061716709/pt/foto/grilled-rib-burger.jpg?s=2048x2048&w=is&k=20&c=4wSjb7tewMWXwQUpExn0ofN-fIDQ9llUgabRqN5P8EA=',
       category: 'Fast Food',
-      rating: '230'
+      rating: '230',
+      Size: [
+        'L',
+        "M",
+        "S"
+      ]
     },
     {
       id: 2,

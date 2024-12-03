@@ -15,6 +15,7 @@ import React from "react";
 import { Product } from "../../components/product/style";
 
 interface Product {
+  Size?: string[]
   product_name: string;
   ImgUrls: string[];
   category: string;
@@ -121,7 +122,7 @@ export function DescriptionHome() {
 
    
     
-    if (target.textContent?.includes("+")) {
+    if (target.classList.contains("aumentar")) {
       setIsFavoritos((prev: Product[]) =>
         prev.map((item: Product) =>
           item.id === produto.id
@@ -129,9 +130,9 @@ export function DescriptionHome() {
             : item
         )
       );
-    } else {
+    } else if(target.classList.contains('diminuir')) {
 
-      if(produto.quantity - 1){
+      if(produto.quantity === 1){
         const confirm =  window.confirm('desejaremover')
         
        if(confirm){
@@ -151,6 +152,15 @@ export function DescriptionHome() {
       );
     }
   };
+
+  const ativarImagem = (product: Product) => {
+ 
+    if(product.ImgUrls && product.ImgUrls.length > 0) {
+      setAtivarImages(true)
+    } else {
+      setAtivarImages(false)
+    }
+  }
 
   return (
     <DescriptiomHome activeAlterarImage={disabledTrocadeImagem}>
@@ -183,7 +193,7 @@ export function DescriptionHome() {
                 key={imageKey}
                 src={ativarImages ? product.ImgUrls[selectedImage] : product.imgUrl}
                 alt={product.product_name}
-                onClick={() => setAtivarImages((prev) => !prev)}
+                onClick={() => ativarImagem(product)}
               />
               <span>{product.product_name}</span>
               <div className="category">
@@ -210,9 +220,9 @@ export function DescriptionHome() {
                     ⭐4.8 <b>({product.rating})</b>
                   </div>
                   <span onClick={(e) => AumentaQuantity(product, e)}>
-                    <button>+</button>
+                    <button className="aumentar">+</button>
                     {product.quantity.toString().padStart(2, "0")}
-                    <button>-</button>
+                    <button className="diminuir">-</button>
                   </span>
                 </div>
               </span>
@@ -225,28 +235,28 @@ export function DescriptionHome() {
                 text={product.detailedDescription || "No description available"}
                 maxLength={30}
               />
-              <h3>Size</h3>
-              <div className="Tamanhos">
-                <button
-                  className={SelectedTamanho === "S" ? "active" : "S"}
-                  onClick={(e) => handleTamanho(e)}
-                >
-                  S
-                </button>
-                <button
-                  className={SelectedTamanho === "M" ? "active" : "M"}
-                  onClick={(e) => handleTamanho(e)}
-                >
-                  M
-                </button>
-                <button
-                  className={SelectedTamanho === "L" ? "active" : "M"}
-                  onClick={(e) => handleTamanho(e)}
-                >
-                  L
-                </button>
+              {product.Size && product.Size.length > 0 && (
+                <>
+                <h3>size</h3>
+                <div className="Tamanhos">
+                  {product.Size.map(size => (
+
+                    <button 
+                    key={size}
+                     onClick={(e) => handleTamanho(e)}
+                     className={SelectedTamanho === size ? "active" : ""}
+                     >
+                      {size} 
+                      </button>
+                  ))}
+                </div>
+                
+                
+                </>
+
+              )}
+              
               </div>
-            </div>
           </React.Fragment>
         ))
       ) : (
