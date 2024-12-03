@@ -25,10 +25,26 @@ export const DescriptiomHome = styled.div<DescriptProps>`
         justify-content: space-between;
         display: flex;
         font-family: 'Roboto mono';
+        text-align: center;
+
+        .leftSides {
+            display: flex;
+            align-items: center;
+        }
+        input {
+            width: 15%;
+            background-color: transparent;
+            border: 0;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
         span {
             display: flex;
-            gap: 1rem;
-            align-items: center;
+            gap: 0.5rem;
+            justify-content: end ;
+            align-content: center;
+            text-align: center;
             button {
                 border: 0;
                 background-color: transparent;
@@ -42,7 +58,7 @@ export const DescriptiomHome = styled.div<DescriptProps>`
  .Next {
     font-size: 1.5rem;
     position: absolute;
-    right: 10px;
+    right: -30px;
     top: 40%;
     display: ${props => props.activeAlterarImage ? 'flex' : 'none'};
  }
@@ -52,7 +68,7 @@ export const DescriptiomHome = styled.div<DescriptProps>`
     display: ${props => props.activeAlterarImage ? 'flex' : 'none'};
 
     font-size: 1.5rem;
-    left: 10px;
+    left: -30px;
  }
  .topSide {
      display: flex;
@@ -65,6 +81,7 @@ export const DescriptiomHome = styled.div<DescriptProps>`
      span {
         font-weight: 600;
      }
+     
  }
  .assets {
     width: 100%;
@@ -72,7 +89,16 @@ export const DescriptiomHome = styled.div<DescriptProps>`
             display: flex;
         flex-direction: column;
         align-content: center;
+        position: relative;
 
+         .trocaImagem {
+            position: relative;
+            z-index: 1;
+         }
+         .Price {
+        color: #A2A2A2;
+        text-align: end;
+    }
 
         p:last-child{
             width: 90%;
@@ -127,18 +153,20 @@ export const DescriptiomHome = styled.div<DescriptProps>`
             font-size: 1.4rem;
             font-weight: 500;
             color: #242424;
- 
-                &:nth-child(6){
+              
+            }
+            .ProductRating{
                     display: flex;
                     align-items: center;
                     gap: 0.3rem;
 
-                    b {
+                    .Rating {
                         color: #A2A2A2;
                         font-size: 1rem;
 
                         }
-            }
+
+                       
         }
 
         p {
@@ -164,11 +192,14 @@ export const DescriptiomHome = styled.div<DescriptProps>`
     font-weight: 300; 
     line-height: 1.6;
     color: #A2A2A2;  
+    
     flex: 1;
     .active {
         border-color: #C67C4E;
         background-color: wheat;
     }
+
+    
    
 
     }
@@ -208,9 +239,11 @@ export const DescriptiomHome = styled.div<DescriptProps>`
         display: flex;
         position: relative;
         width: 100%;
-        padding: 1rem 1.5rem;;
-        height: 12%;
-        background-color: white;
+        .rigt-side{
+            display: flex;
+            flex-direction: column-reverse; 
+            align-items: center;
+        }
          p {
             color: #A2A2A2;
             font-weight: 500;
@@ -221,8 +254,8 @@ export const DescriptiomHome = styled.div<DescriptProps>`
          }
 
         button {
-            width: 60%;
             border-radius: 1rem;
+            padding: 1rem 2rem;
             font-family: 'sora';
             border: 0;
             background-color: #C67C4E;

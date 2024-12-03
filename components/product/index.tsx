@@ -1,6 +1,9 @@
-  import { useContext } from "react";
+  import React, { useContext } from "react";
   import { Product } from "./style";
   import { ProductContext } from "../../ProvideActive";
+
+  
+  import swape from "../../src/audios/swape.mp3"
 
   interface ProductProps {
     filterItem: string;
@@ -18,7 +21,8 @@
 
   export function ProductList({ filterItem }: ProductProps) {
     const context = useContext(ProductContext);
-
+    
+    const audioSwape = new Audio(swape)
   
     // @ts-expect-error erro na tipagem
 
@@ -27,6 +31,7 @@
 
 
     const handleCart = (products: ProductType) => {
+     audioSwape.play()
     setIsFavoritos((prevcart: ProductType[]) => {
       const isProduct = prevcart.find((item) => item.id === products.id);
 
@@ -74,7 +79,7 @@
 
             <div className="assets">
               <p>$ {product.preco}</p>  
-              <button onClick={()=> {handleCart(product)}} >+</button>
+              <button onClick={()=> {handleCart(product) }} >+</button>
             </div>
           </Product>
         ))}

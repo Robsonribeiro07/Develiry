@@ -57,7 +57,12 @@ export const ProdutosProviderItem = ({ children }: ProductProviderProps) => {
       detailedDescription: "Pizza com 10 fatias generosas de queijo, molho de tomate caseiro e uma crosta perfeita, ideal para compartilhar com amigos e família.",
       imgUrl: 'https://media.istockphoto.com/id/1442417585/pt/foto/person-getting-a-piece-of-cheesy-pepperoni-pizza.webp?a=1&b=1&s=612x612&w=0&k=20&c=7B46BggEf-G4vKPJWSIc6Goqk0JnVDNsoIpxD06epBw=',
       category: 'Fast Food',
-      rating: '235'
+      rating: '235',
+      ImgUrls: [
+        'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGl6emF8ZW58MHx8MHx8fDA%3D',
+        'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGl6emF8ZW58MHx8MHx8fDA%3D',
+        'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emF8ZW58MHx8MHx8fDA%3D'
+      ]
 
     },
     {
